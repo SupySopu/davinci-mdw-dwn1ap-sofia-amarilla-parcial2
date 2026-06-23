@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Estedad:wght@100..900&display=swap');
+
+/*Fonts*/
+.mitr-extralight {
+  font-family: "Mitr", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.mitr-light {
+  font-family: "Mitr", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.mitr-regular {
+  font-family: "Mitr", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mitr-medium {
+  font-family: "Mitr", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mitr-semibold {
+  font-family: "Mitr", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.mitr-bold {
+  font-family: "Mitr", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* 
+    <weight>: Use a value from 100 to 900
+    <uniquifier>: Use a unique and descriptive class name 
+*/
+
+.estedad{
+  font-family: "Estedad", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --main-blue: #041016;
+    --lighter-blue: #3AB2AA;
+    --text-coloR: #EFF3FF;
+    --red: #E53235;
+    --btn-gradient: linear-gradient(90deg, #AF1B56 0%, #E53235 100%);
+}
+
+/*Inicio*/
+#hero-home{
+    background-image: url('./img/Hero-Inicio.jpg');
+    height: 80vh;
+}
+
+#hero-home .container button{
+    background: var(--btn-gradient);
+}
