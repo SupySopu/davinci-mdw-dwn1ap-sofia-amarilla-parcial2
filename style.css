@@ -2,52 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Estedad:wght@100..900&display=swap');
 
 /*Fonts*/
-.mitr-extralight {
-  font-family: "Mitr", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
 
-.mitr-light {
-  font-family: "Mitr", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.mitr-regular {
-  font-family: "Mitr", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.mitr-medium {
-  font-family: "Mitr", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.mitr-semibold {
-  font-family: "Mitr", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.mitr-bold {
-  font-family: "Mitr", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* 
-    <weight>: Use a value from 100 to 900
-    <uniquifier>: Use a unique and descriptive class name 
-*/
-
-.estedad{
-  font-family: "Estedad", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
+:root{
+  --main-blue: #041016;
+  --lighter-blue: #3AB2AA;
+  --text-coloR: #EFF3FF;
+  --red: #E53235;
+  --btn-gradient: linear-gradient(90deg, #AF1B56 0%, #E53235 100%);
+  --card-gradient: linear-gradient(180deg, rgba(3, 35, 48, 0.212) 0%, rgba(10, 111, 152, 0.2) 100%);
+  --card-gradient-2: linear-gradient(180deg, rgba(3,36,50,0.20) 60%, rgba(10, 111, 152, 0.2) 100%)
 }
 
 *{
@@ -56,20 +19,671 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body{
-    --main-blue: #041016;
-    --lighter-blue: #3AB2AA;
-    --text-coloR: #EFF3FF;
-    --red: #E53235;
-    --btn-gradient: linear-gradient(90deg, #AF1B56 0%, #E53235 100%);
+  background-color: var(--main-blue);
+  color: var(--text-coloR);
+  font-family: "Estedad", sans-serif;
+}
+
+/*Navbar*/
+#main-header{
+  position: absolute;
+  top: 16px;
+  width: 100%;
+}
+
+#main-header .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 64px;
+  margin: 0 auto;
+  background-color: var(--main-blue);
+  border-radius: 80px;
+  box-shadow: 0 0 16px 16px rgba( 0,0,0,0.2 );
+  gap: 10rem;
+
+  h1{
+    background-image: url("./img/icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    aspect-ratio: 1/1;
+    font-size: 0;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+#main-header .main-navigation ul{
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  list-style: none;
+
+  li a{
+    text-decoration: none;
+    color: var(--text-coloR);
+    font-family: "Estedad", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 /*Inicio*/
-#hero-home{
-    background-image: url('./img/Hero-Inicio.jpg');
-    height: 80vh;
+/*Primera Sección*/
+#hero-home,
+#hero-contact,
+#hero-tours,
+#hero-nosotros{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 85vh;   
+    border-radius: 0 0 32px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#hero-home .container button{
+#hero-home h2{
+  font-family: "mitr", sans-serif;
+  font-weight: 500;
+  font-size: 200px;
+  line-height: 200px;
+}
+
+
+#hero-tours h2,
+#hero-contact h2,
+#hero-nosotros h2,
+#hero-thank h2{
+  font-family: "mitr", sans-serif;
+  font-weight: 500;
+  font-size: 128px;
+  line-height: 150px;
+}
+
+#hero-home{
+    background-image: url('./img/Hero-Inicio.jpg');
+}
+
+#hero-tours{
+    background-image: url('./img/Hero-Guias.jpg');
+}
+
+#hero-contact{
+  background-image: url("./img/Hero-Contact.jpg");
+}
+
+#hero-nosotros{
+  background-image: url("img/hero-informacion.jpg");
+}
+
+#hero-thank{
+  background: url("img/hero-thank.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 95vh;   
+  border-radius: 0 0 32px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero-home .container,
+#hero-tours .container,
+#hero-contact .container,
+#hero-nosotros .container,  
+#hero-thank .container{
+  left: 0; 
+  right: 0;
+
+  button, button[type="submit"]{
     background: var(--btn-gradient);
+    display: inline-flex;
+    width: 208px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 8px;
+    border-style: none;
+
+    font-family: "Mitr", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--text-coloR);
+  }
+
+  p{
+    font-size: 32px;
+
+    &.highlight{
+      font-weight: 600;
+      line-height: 5px;
+    }
+  }
+
+  a{
+    background: var(--btn-gradient);
+    display: inline-flex;
+    width: 208px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 8px;
+    border-style: none;
+
+    font-family: "Mitr", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--text-coloR);
+    text-decoration: none;
+  }
+}
+
+/*Cuadro*/
+#why-awesome .container,
+#values .container {
+  background: var(--card-gradient);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px auto;
+
+  .material-symbols-outlined{
+    font-size: 48px;
+  }
+
+  ul{
+    gap: 8px;
+
+    li{
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      gap:16px;
+      width: 24%;
+
+      div p{
+        text-wrap: wrap;
+      }
+    }
+  }
+}
+
+/*Mapa*/
+
+#map .container-map{
+    background-image: url("img/mapa-islandia.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 100%;
+    height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    ul{
+      gap: 8px;
+
+      li{
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;  
+
+        .material-symbols-outlined{
+          font-size: 48px;
+        }
+
+        div {
+          h3{
+            font-size: 32px;
+            line-height: 30px;
+          }
+
+          h4{
+            font-size: 20px;
+          }
+
+          p{
+            font-size: 16px;
+            text-wrap: wrap;
+          }
+        }
+      }
+    }
+}
+
+/*nosotros*/
+.mision-vision{
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img{
+    height: 700px;
+    border-radius: 16px;
+  }
+
+  .card-info{
+      border-radius: 16px;
+      font-size: 16px;
+      flex: 0 0 calc((100% - 32px) / 3);
+      height: 700px;
+      font-size: 1.2rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      gap: 20%; 
+      padding: 32px;
+
+      .location-card{
+        display: flex;
+        gap: 8px;
+        font-size: 36px;
+      }
+
+      .hours-card{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .text-container{
+        padding: 16px;
+        padding-bottom: 32px;
+      }
+
+      img{
+        width: 100%;
+        height: 264px;
+        object-fit: cover;
+      }
+
+      h3{
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      hr{
+        border-color: var(--red);
+        margin: 8px 4px;
+      }
+
+      p{
+        padding-top: 4px;
+      }
+ }
+}
+
+
+
+/*footer*/
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 32px auto;
+
+  .websites {
+    display: flex;
+    flex-direction: column;
+
+    ul li {
+      gap: 8px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-coloR);
+
+      &:hover {
+        color: var(--red);
+      }
+      
+      .material-symbols-outlined {
+        font-size: 24px; 
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      gap: 8px;
+      padding: 0;
+      margin-top: 12px;
+    }
+  }
+
+  .legal {
+    ul li{
+      gap: 8px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+/*form*/
+#form-wrapper{
+  width: 100%;
+  padding: 0 32px;
+
+  .container{
+    display: flex;
+    gap: 40px;
+    margin-top: 24px;
+    justify-content: space-between;
+
+    iframe{
+      width: 100%;
+      height: 100%;
+      height: 580px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      margin: 18px 0;
+    }
+
+    .location{
+      span{
+        font-size: 2rem;
+      }
+
+      ul li{
+        display: inline-flex;
+        align-items:center;
+        gap: 8px
+        
+      }
+
+      p{
+        font-size: 1.2rem;
+      }
+    }
+
+    .form{
+      flex: 1;
+
+      form{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: 60px;
+        padding-bottom: 32px;
+        background: var(--card-gradient-2);
+        border-radius: 16px;
+        
+        label{
+          display: flex;
+          padding: 8px 0;
+          font-weight: 700;
+        }
+
+        input, textarea{
+          margin-bottom: 16px 0;
+          background-color: rgba(5, 60, 82, 0.4);
+          outline: none;
+          border: none;
+          color: var(--text-coloR);
+          font-family: "Estedad", sans-serif;
+        }
+
+        fieldset{
+          margin: 16px 0;
+          label::after{
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
+
+legend::after,
+label::after{
+  content:"*";
+  color: var(--lighter-blue);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  min-width: 60px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--lighter-blue);
+  box-shadow: 0 0 5px var(--lighter-blue);
+  outline: none;  
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+fieldset{
+  border: none;
+}
+
+.options label{
+  gap: 10px;
+  padding: 12px 15px;
+  border-radius: 6px;
+}
+
+form button{
+  padding: 14px 28px;
+  font-size: 16px;
+  margin-top: 28px;
+  color: var(--text-coloR);
+  border: none;
+  font-weight: bold;
+  background: var(--btn-gradient);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center;
+  width: 40%;
+}
+
+/*estilos generales secciones*/
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--red);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid var(--red);
+    margin: 0 30px;
+}
+
+.slider-cards{
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+  margin: 0 auto;
+
+  .container-cards{
+    padding-top: 1rem;
+    gap: 16px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  .buttons{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);    
+  }
+    
+  .buttons a{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10px;
+    border: 3px solid var(--red);
+    background-color: transparent;
+    transition: 0.3s ease;
+  }
+}
+
+&:has(#first-row:target) .buttons a[href="#first-row"], 
+&:has(#second-row:target) .buttons a[href="#second-row"],
+&:has(#third-row:target) .buttons a[href="#third-row"], 
+&:has(#fourth-row:target) .buttons a[href="#fourth-row"]  {
+  width: 2.5rem;
+  background-color: var(--red);
+  border-radius: 10px;
+}
+
+#first-row, #second-row, #third-row, #fourth-row {
+  scroll-margin-top: 15vh; 
+}
+
+.card{
+      background: var(--card-gradient-2);
+      border-radius: 16px;
+      font-size: 16px;
+      overflow: hidden;
+      flex: 0 0 calc((100% - 32px) / 3);
+      scroll-snap-align: start;
+
+      .location-card{
+        display: flex;
+        gap: 8px;
+      }
+
+      .info-card {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 200;
+
+        div{
+          display: flex;
+          gap: 8px;
+        }
+      }
+
+      .hours-card{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .text-container{
+        padding: 16px;
+        padding-bottom: 32px;
+      }
+
+      img{
+        width: 100%;
+        height: 264px;
+        object-fit: cover;
+      }
+
+      h3{
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      hr{
+        border-color: var(--red);
+        margin: 8px 4px;
+      }
+
+      p{
+        padding-top: 4px;
+      }
+ }
+
+/*estilos generales*/
+
+.col-1{ width: 8.33%;}
+.col-2{ width: 16.6667% }
+.col-3{ width: 25% }
+.col-4{ width: 33.3333% }
+.col-5{ width: 41.6667% }
+.col-6{ width: 50% }
+.col-7{ width: 58.3333%; }
+.col-8{ width: 66.6667% }
+.col-9{ width: 75% }
+.col-10{ width: 83.3333%; }
+.col-11{ width: 91.6667% }
+.col-12{ width: 100% }
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.highlight{
+  color: var(--red);
+}
+
+.blue-highlight{
+  color: var(--lighter-blue);
+}
+
+strong, em{
+  font-weight: 400;
+  font-style: normal;
 }

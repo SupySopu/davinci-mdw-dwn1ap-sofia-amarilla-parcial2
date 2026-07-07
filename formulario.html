@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link rel="icon" href="./img/icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container col-9">
+            <h1 id="logo">.</h1>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="itinerario.html">Itinerario</a></li>
+                    <li><a href="informacion.html">Información</a></li>
+                    <li><a href="formulario.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-contact">
+            <div class="container">
+                <h2>¿LISTO PARA EXPLORAR?</h2>
+                <p>Contas con Nuestra Ayuda.</p>
+            </div>
+        </section>
+
+        <section id="form-wrapper">
+            <div class="separator">
+                <h2>CONTACTANOS</h2>
+            </div>
+            <div class="container">
+                <div class="location col-6">
+                    <p>
+                        Si tiene alguna pregunta sobre los tours o ayuda para planear su itinerario, estamos dispuestos a 
+                        asistirlo en todos los pasos que sean necesarios.
+                    </p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1749.1852004942148!2d-22.56033870261772!3d63.997380170248896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d6021804b9f869%3A0xf685a99bacb77fb9!2sFaxabraut%2031b%2C%20230%20Keflav%C3%ADk%2C%20Islandia!5e0!3m2!1ses!2sar!4v1783367046807!5m2!1ses!2sar" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <ul>
+                        <li>
+                            <span class="material-symbols-outlined blue-highlight">location_on</span>
+                            <p>Faxabraut 31b 230 Keflavik KT</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined blue-highlight">mobile_chat</span>
+                            <p>+354 786 3157</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined blue-highlight">mail</span>
+                            <p>info@iceland.is</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="form">
+                    <form action="./section/gracias.html" method="POST">
+                        
+                    <h3 class="highlight">Formulario</h3>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="nombre" required>
+                        
+                        <label for="mail">Correo electrónico</label>
+                            <input type="email" id="mail" name="correo" required>
+                        
+                        <label for="text">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                        
+                        <div class="options">
+                            <fieldset>
+                                <legend>¿Qué te interesa visitar?</legend>
+                                <label for="glaciares">
+                                    <input id="glaciares" type="checkbox" name="glaciares" value="glaciares"> Glaciares
+                                </label>
+                                <label for="auroras">
+                                    <input id="auroras" type="checkbox" name="auroras" value="auroras"> Auroras Boreales
+                                </label>
+                                <label for="volcanes">
+                                    <input id="volcanes" type="checkbox" name="volcanes" value="volcanes"> Volcanes
+                                </label>
+                            </fieldset>
+                        </div>
+
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="mensaje" placeholder="Escribe tu consulta detallada aquí..." required></textarea>
+
+                        <button type="submit">Enviar Consulta</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="row">
+            <div class="social-media">
+                <a href="#hero-home">
+                    <img src="./img/icon.png" alt="icon-go-to-beginning">
+                </a>
+                <ul class="row">
+                    <li>
+                        <a href="https://facebook.com">
+                            <img src="./img/icon-facebook.png" alt="icon-facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tiktok.com">
+                            <img src="./img/icon-tik-tok.png" alt="icon-tik-tok">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">
+                            <img src="./img/icon-ig.png" alt="icon-ig">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com">
+                            <img src="./img/icon-linkedin.png" alt="icon-linkedin">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="websites">
+                <h4>Páginas Oficiales</h4>
+                <ul>
+                    <li>
+                        <a href="https://icelandiconline.com">
+                            <span class="material-symbols-outlined blue-highlight">school</span>
+                            Aprender Islandés
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://government.is">
+                            <span class="material-symbols-outlined blue-highlight">language</span>
+                            Sitio Web del Gobierno
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="material-symbols-outlined blue-highlight">newspaper</span>
+                            Noticias Islandia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="legal">
+                <h4>Datos del Alumno</h4>
+                <ul>
+                    <li>Escuela Da Vinci</li>
+                    <li>Maquetado y Desarrollo Web </li>
+                    <li>Carlos Ferrer</li>
+                    <li>2026</li>
+                    <li class="highlight">Diseño de Sofía Amarilla</li>
+                </ul>
+            </div>
+    </footer>
+</body>
+</html>
