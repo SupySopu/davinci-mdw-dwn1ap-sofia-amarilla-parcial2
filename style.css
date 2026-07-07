@@ -236,39 +236,56 @@ body{
     width: 100%;
     height: 90vh;
 
+    position: relative;
     display: flex;
+    
+    justify-content: center;
     align-items: center;
 
     ul{
       gap: 8px;
+      width: 100%;
+      height: 100%;
 
       li{
-        list-style: none;
         display: flex;
         align-items: flex-start;
         gap: 12px;  
+        /* width: 45%; */
 
         .material-symbols-outlined{
           font-size: 48px;
         }
 
-        div {
-          h3{
-            font-size: 32px;
-            line-height: 30px;
-          }
-
-          h4{
-            font-size: 20px;
-          }
-
-          p{
-            font-size: 16px;
-            text-wrap: wrap;
-          }
-        }
+        h3 { font-size: 32px; line-height: 30px; }
+        h4 { font-size: 20px; }
+        p { font-size: 16px; text-wrap: wrap; }
       }
     }
+}
+
+#map .container-map .up-left{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+#map .container-map .up-right{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+#map .container-map .bottom-right{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+#map .container-map .bottom-left{
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
 }
 
 /*nosotros*/
