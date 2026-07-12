@@ -30,6 +30,17 @@ body{
   font-family: "Estedad", sans-serif;
 }
 
+strong, em{
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container{
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*Navbar*/
 #main-header{
   position: absolute;
@@ -39,6 +50,7 @@ body{
 
 #main-header .container{
   display: flex;
+  width:max-content;
   justify-content: center;
   align-items: center;
   padding: 4px 64px;
@@ -46,7 +58,7 @@ body{
   background-color: var(--main-blue);
   border-radius: 80px;
   box-shadow: 0 0 16px 16px rgba( 0,0,0,0.2 );
-  gap: 10rem;
+  gap: 40%;
 
   h1{
     background-image: url("./img/icon.png");
@@ -63,7 +75,7 @@ body{
 #main-header .main-navigation ul{
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  
   list-style: none;
 
   li a{
@@ -233,7 +245,6 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    width: 100%;
     height: 90vh;
 
     position: relative;
@@ -257,7 +268,7 @@ body{
           font-size: 48px;
         }
 
-        h3 { font-size: 32px; line-height: 30px; }
+        h3 { font-size: 2rem; line-height: 30px; }
         h4 { font-size: 20px; }
         p { font-size: 16px; text-wrap: wrap; }
       }
@@ -266,26 +277,26 @@ body{
 
 #map .container-map .up-left{
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 20px;
+  left: 20px;
 }
 
 #map .container-map .up-right{
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 20px;
+  right: 20px;
 }
 
 #map .container-map .bottom-right{
   position: absolute;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
 }
 
 #map .container-map .bottom-left{
   position: absolute;
-  bottom: 50px;
-  left: 50px;
+  bottom: 20px;
+  left: 20px;
 }
 
 /*nosotros*/
@@ -295,16 +306,14 @@ body{
   justify-content: space-evenly;
   align-items: center;
 
-  img{
-    height: 700px;
+  img {
     border-radius: 16px;
   }
 
-  .card-info{
+  .mision-vision-container{
       border-radius: 16px;
       font-size: 16px;
       flex: 0 0 calc((100% - 32px) / 3);
-      height: 700px;
       font-size: 1.2rem;
 
       display: flex;
@@ -313,21 +322,10 @@ body{
       gap: 20%; 
       padding: 32px;
 
-      .location-card{
+      .subtitle-container{
         display: flex;
         gap: 8px;
         font-size: 36px;
-      }
-
-      .hours-card{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .text-container{
-        padding: 16px;
-        padding-bottom: 32px;
       }
 
       img{
@@ -356,7 +354,7 @@ body{
 
 /*footer*/
 /*footer*/
-footer {
+footer .row {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -698,9 +696,4 @@ form button{
 
 .blue-highlight{
   color: var(--lighter-blue);
-}
-
-strong, em{
-  font-weight: 400;
-  font-style: normal;
 }
