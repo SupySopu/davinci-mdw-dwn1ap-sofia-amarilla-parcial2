@@ -35,8 +35,12 @@ strong, em{
   font-style: normal;
 }
 
+ul{
+  list-style-type: none;
+}
+
 .container{
-  max-width: 1300px;
+  max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -49,16 +53,19 @@ strong, em{
 }
 
 #main-header .container{
+  background-color: var(--main-blue);
+  border-radius: 80px;
+  box-shadow: 0 0 16px 16px rgba( 0,0,0,0.2 );
   display: flex;
-  width:max-content;
+  width: max-content;
   justify-content: center;
   align-items: center;
   padding: 4px 64px;
   margin: 0 auto;
-  background-color: var(--main-blue);
-  border-radius: 80px;
-  box-shadow: 0 0 16px 16px rgba( 0,0,0,0.2 );
-  gap: 40%;
+  gap: 80px;
+
+  label[for="menu-toggle"],
+  #menu-toggle { display: none; }
 
   h1{
     background-image: url("./img/icon.png");
@@ -70,23 +77,23 @@ strong, em{
     width: 64px;
     height: 64px;
   }
-}
 
-#main-header .main-navigation ul{
-  display: flex;
-  justify-content: center;
-  
-  list-style: none;
+  .main-navigation ul{
+    display: flex;
+    gap: 5rem;
 
-  li a{
-    text-decoration: none;
-    color: var(--text-coloR);
-    font-family: "Estedad", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
+    li a{
+      text-decoration: none;
+      color: var(--text-coloR);
+      font-family: "Estedad", sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      width: 100px;
+      line-height: 20px;
+    }
   }
 }
+
 
 /*Inicio*/
 /*Primera Sección*/
@@ -125,11 +132,11 @@ strong, em{
 }
 
 #hero-home{
-    background-image: url('./img/Hero-Inicio.jpg');
+  background-image: url('./img/Hero-Inicio.jpg');
 }
 
 #hero-tours{
-    background-image: url('./img/Hero-Guias.jpg');
+  background-image: url('./img/Hero-Guias.jpg');
 }
 
 #hero-contact{
@@ -350,9 +357,6 @@ strong, em{
  }
 }
 
-
-
-/*footer*/
 /*footer*/
 footer .row {
   display: flex;
@@ -486,8 +490,8 @@ footer .row {
   }
 }
 
-legend::after,
-label::after{
+.form legend::after,
+.form label::after{
   content:"*";
   color: var(--lighter-blue);
 }
@@ -696,4 +700,122 @@ form button{
 
 .blue-highlight{
   color: var(--lighter-blue);
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+@media screen and (max-width: 400px) {
+  /* Nav Bar */
+  #main-header {
+    top: 0;
+    position: sticky;
+
+    .container {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center; 
+      width: 100%;
+      border-radius: 0;
+      padding: 10px 20px; 
+      gap: 0;
+      position: relative; 
+
+      h1 {
+        margin: 0; 
+      }
+
+      .main-navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; 
+
+        label[for="menu-toggle"] {
+          display: flex; 
+          width: 50px; 
+          height: 50px;
+          border-radius: 8px;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0; 
+          cursor: pointer;
+
+          span {
+            font-size: 32px; 
+          }
+        }
+
+        ul {
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+          list-style: none;
+          padding: 20px 0;
+          margin: 0;
+          transition: all .5s;
+
+          li {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            a {
+              font-size: 20px;
+              text-align: center;
+              width: 100%;
+            }
+          }
+        }
+
+        #menu-toggle:checked ~ ul {
+          display: flex;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  #main-header .container .main-navigation ul {
+    position: absolute;
+    top: 100%; 
+    width: 100%;
+    background-color: var(--main-blue);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2); 
+    z-index: 999; 
+  }
+
+  /*Index*/
+  #hero-home h2 {
+    text-align: center;
+    position: static;
+  }
+
+  .title-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #why-awesome{
+    .container{
+      ul{
+        width: 100%;
+        li{
+          display: inline;
+
+          h3{ font-size: 1.5rem }
+          p { display: none }
+        }
+      }
+    }
+  }
+
+
+    /* sistema de grillas 12grid mobile */
+    .col-mobile-1{ width: 25% }
+    .col-mobile-2{ width: 50% }
+    .col-mobile-3{ width: 75% }
+    .col-mobile-4{ width: 100% !important}
 }
