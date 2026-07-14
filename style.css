@@ -83,17 +83,30 @@ ul{
     gap: 5rem;
 
     li a{
+      position: relative;
       text-decoration: none;
       color: var(--text-coloR);
       font-family: "Estedad", sans-serif;
       font-weight: 600;
       font-size: 1rem;
-      width: 100px;
       line-height: 20px;
+      padding: 6px 0;
     }
   }
 }
 
+li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: var(--text-coloR);
+  transition: all 0.4s ease;
+}
+
+li a:hover:before{ width: 100% }
 
 /*Inicio*/
 /*Primera Sección*/
@@ -710,7 +723,8 @@ form button{
   /* Nav Bar */
   #main-header {
     top: 0;
-    position: sticky;
+    position: fixed;
+    z-index: 999; 
 
     .container {
       display: flex;
@@ -720,11 +734,6 @@ form button{
       border-radius: 0;
       padding: 10px 20px; 
       gap: 0;
-      position: relative; 
-
-      h1 {
-        margin: 0; 
-      }
 
       .main-navigation {
         display: flex;
@@ -735,25 +744,24 @@ form button{
           display: flex; 
           width: 50px; 
           height: 50px;
-          border-radius: 8px;
           justify-content: center;
           align-items: center;
           margin-bottom: 0; 
           cursor: pointer;
 
-          span {
-            font-size: 32px; 
-          }
+          span { font-size: 32px }
         }
 
         ul {
-          display: none;
+          position: fixed;
+          height: 100vh;
           flex-direction: column;
           align-items: center;
-          gap: 1.5rem;
+          gap: 5rem;
           list-style: none;
           padding: 20px 0;
           margin: 0;
+          right: -100%;
           transition: all .5s;
 
           li {
@@ -764,27 +772,37 @@ form button{
             a {
               font-size: 20px;
               text-align: center;
-              width: 100%;
             }
           }
         }
 
         #menu-toggle:checked ~ ul {
-          display: flex;
-          left: 0;
+          right: 0;
         }
       }
     }
   }
 
   #main-header .container .main-navigation ul {
-    position: absolute;
-    top: 100%; 
-    width: 100%;
+    position: fixed;
+    top: 84px;
+    width: 80%;
     background-color: var(--main-blue);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.2); 
-    z-index: 999; 
+    box-shadow: 0 20px 16px 16px rgba( 0,0,0,0.2 );
   }
+
+  li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--text-coloR);
+    transition: all 0.4s ease;
+  }
+
+  li a:hover:before{ width: 100% }
 
   /*Index*/
   #hero-home h2 {
