@@ -133,7 +133,6 @@ li a:hover:before{ width: 100% }
   line-height: 200px;
 }
 
-
 #hero-tours h2,
 #hero-contact h2,
 #hero-nosotros h2,
@@ -805,31 +804,136 @@ form button{
   li a:hover:before{ width: 100% }
 
   /*Index*/
-  #hero-home h2 {
-    text-align: center;
-    position: static;
+  #hero-home, #hero-tours, #hero-nosotros, #hero-contact{
+    height: 100vh;
+    text-align: left;
+    padding: 24px;
   }
 
-  .title-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #hero-home{
+    .container {
+      p{
+        font-size: 1.5rem;
+        padding-bottom: 40px;
+      }
+
+      .highlight{
+        font-size: 2rem;
+        padding-bottom: 0;
+      }
+
+      h2{
+        font-size: 4.6rem;
+        line-height: 108px;
+      }
+    }
   }
 
-  #why-awesome{
-    .container{
-      ul{
-        width: 100%;
-        li{
-          display: inline;
+  #hero-tours{
+    .container {
+      p{
+        font-size: 1.5rem;
+        padding-bottom: 40px;
+      }
 
-          h3{ font-size: 1.5rem }
+      h2{
+        font-size: 4rem;
+        line-height: 64px;
+      }
+    }
+  }
+
+  #hero-nosotros, #hero-contact{
+    .container {
+      p{
+        font-size: 1.5rem;
+      }
+
+      h2{
+        font-size: 4rem;
+        line-height: 64px;
+      }
+    }
+  }
+
+  #why-awesome, #values {
+  .container {
+    ul {
+      width: 100%;
+      gap: 36px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 40%;
+        justify-content: center;
+
+        span { line-height: 30px;}
+        div{
+          h3 { font-size: 1.1rem; text-align: center; }
           p { display: none }
         }
       }
     }
   }
+}
 
+  #map .container-map{
+    background-size: contain;
+    background-position: center top;
+    height: 500px;
+    width: 100%;
+    margin: 64px 0;
+
+    .up-left, .up-right, .bottom-right{ display: none }
+
+    .bottom-left{
+      display: flex;
+      width: calc(100% - 32px);
+
+      h3{ font-size: 2.2rem }
+      h4{ font-size: 1.4rem }
+      p{ font-size: 1.2rem }
+    }
+  }
+
+  #best-locations .container,
+  #best-restaurants .container,
+  #best-tours .container,
+  #travel-packet .container{
+    .separator{
+      h2{ font-size: 1.5rem }
+    }
+
+    .slider-cards{
+      h3{ font-size: 1.2rem}
+    }
+  }
+
+  .separator::before,
+  .separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 2px solid var(--red);
+      margin: 0 16px;
+  }
+
+  .slider-cards .container-cards{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+
+    .card{
+      flex: 0 0 100%;
+    }
+  }
 
     /* sistema de grillas 12grid mobile */
     .col-mobile-1{ width: 25% }
