@@ -808,6 +808,7 @@ form button{
     padding: 24px;
   }
 
+
   #hero-home{
     .container {
       p{
@@ -843,9 +844,7 @@ form button{
 
   #hero-nosotros, #hero-contact{
     .container {
-      p{
-        font-size: 1.5rem;
-      }
+      p{ font-size: 1.5rem }
 
       h2{
         font-size: 4rem;
@@ -854,8 +853,29 @@ form button{
     }
   }
 
+  #hero-thank {
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+
+    .container{
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        padding-bottom: 40px;
+      }
+
+      h2{
+        font-size: 3rem;
+        line-height: 64px;
+      }
+    }
+  }
+  
+
   #why-awesome, #values {
-  .container {
+  .container
     ul {
       width: 100%;
       gap: 36px;
@@ -878,7 +898,6 @@ form button{
           p { display: none }
         }
       }
-    }
   }
 }
 
@@ -967,6 +986,22 @@ form button{
           p{ display:inline-flex }
         }
       }}
+    }
+  }
+
+  #mision-vision-sobre-nosotros .container{
+    padding: 0;
+
+    .mision-vision{
+      display: flex;
+      flex-direction: column;
+      padding: 0 16px;
+      gap: 20px;
+
+      .mision-vision-container{
+        padding: 0;
+        gap: 20px;
+      }
     }
   }
 
