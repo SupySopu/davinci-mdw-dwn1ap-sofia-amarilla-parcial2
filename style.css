@@ -1005,6 +1005,28 @@ form button{
     }
   }
 
+  footer{
+    .container .row{
+      display: flex;
+      flex-wrap: wrap;
+      text-wrap: wrap;
+      justify-content: space-around;
+
+      font-size: 0.8rem;
+
+      .social-media{
+        width: 100%;
+        padding-top: 20px;
+        align-items: center;
+        order: 2;
+
+        ul{
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
     /* sistema de grillas 12grid mobile */
     .col-mobile-1{ width: 25% }
     .col-mobile-2{ width: 50% }
