@@ -113,17 +113,18 @@ li a:hover:before{ width: 100% }
 #hero-home,
 #hero-contact,
 #hero-tours,
-#hero-nosotros{
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 85vh;   
-    border-radius: 0 0 32px 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#hero-nosotros,
+#hero-news{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 85vh;   
+  border-radius: 0 0 32px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #hero-home h2{
@@ -136,7 +137,8 @@ li a:hover:before{ width: 100% }
 #hero-tours h2,
 #hero-contact h2,
 #hero-nosotros h2,
-#hero-thank h2{
+#hero-thank h2,
+#hero-news h2{
   font-family: "mitr", sans-serif;
   font-weight: 500;
   font-size: 128px;
@@ -171,6 +173,10 @@ li a:hover:before{ width: 100% }
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#hero-news{
+  background-image: url("img/news.jpg");
 }
 
 #hero-home .container,
@@ -260,38 +266,37 @@ li a:hover:before{ width: 100% }
 /*Mapa*/
 
 #map .container-map{
-    background-image: url("img/mapa-islandia.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    height: 90vh;
-
-    position: relative;
-    display: flex;
+  background-image: url("img/mapa-islandia.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 90vh;
+  position: relative;
+  display: flex;
     
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    ul{
-      gap: 8px;
-      width: 100%;
-      height: 100%;
+  ul{
+    gap: 8px;
+    width: 100%;
+    height: 100%;
 
-      li{
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;  
-        /* width: 45%; */
+    li{
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;  
+      /* width: 45%; */
 
-        .material-symbols-outlined{
-          font-size: 48px;
-        }
-
-        h3 { font-size: 2rem; line-height: 30px; }
-        h4 { font-size: 20px; }
-        p { font-size: 16px; text-wrap: wrap; }
+      .material-symbols-outlined{
+        font-size: 48px;
       }
+
+      h3 { font-size: 2rem; line-height: 30px; }
+      h4 { font-size: 20px; }
+      p { font-size: 16px; text-wrap: wrap; }
     }
+  }
 }
 
 #map .container-map .up-left{
@@ -368,6 +373,7 @@ li a:hover:before{ width: 100% }
       }
  }
 }
+
 
 /*footer*/
 footer .row {
@@ -684,6 +690,82 @@ form button{
       }
  }
 
+#news .container .row{
+  .news-feed{
+    article{
+      margin-bottom: 32px;
+
+      img{
+        height: 40vh;
+      }
+    }
+  }
+
+  .location-card{
+    div{
+      display: flex; 
+      align-items: center; 
+      gap: 5px;
+    }
+  }
+
+  aside{
+    margin-left: auto;
+    margin-top: 10vh;
+
+    .search-container{
+      form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        input{
+          background-color: rgba(5, 60, 82, 0.4);
+          border-radius: 6px 0 0 0 ;
+          height: 38px;
+          outline: none;
+          border: none;
+          color: var(--text-coloR);
+          font-family: "Estedad", sans-serif;
+          flex-grow: 1;
+        }
+
+        button{
+          color: var(--text-coloR);
+          border: none;
+          font-weight: bold;
+          background: var(--btn-gradient);
+          border-radius: 0 6px 0 0;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          align-self: center;
+          margin: 0;
+          width: 48px;
+          padding: 8px 0;
+
+          span{font-size: 16px;}
+        }
+      }
+    }
+
+    .text-container{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      background: var(--card-gradient-2);
+      border-radius: 0 0 16px 16px;
+      font-size: 16px;
+      padding: 24px;
+
+      a{
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+  }
+}
 /*estilos generales*/
 
 .col-1{ width: 8.33%;}
@@ -802,7 +884,7 @@ form button{
   li a:hover:before{ width: 100% }
 
   /*Index*/
-  #hero-home, #hero-tours, #hero-nosotros, #hero-contact{
+  #hero-home, #hero-tours, #hero-nosotros, #hero-contact, #hero-news{
     height: 100vh;
     text-align: left;
     padding: 24px;
@@ -842,7 +924,7 @@ form button{
     }
   }
 
-  #hero-nosotros, #hero-contact{
+  #hero-nosotros, #hero-contact, #hero-news{
     .container {
       p{ font-size: 1.5rem }
 
@@ -925,7 +1007,8 @@ form button{
   #best-tours .container,
   #travel-packet .container,
   #form-wrapper .container,
-  #hero-thank .container{
+  #hero-thank .container,
+  #news .container .row .news-feed{
     .separator{
       h2{ font-size: 1.5rem }
     }
@@ -1001,6 +1084,28 @@ form button{
       .mision-vision-container{
         padding: 0;
         gap: 20px;
+      }
+    }
+  }
+
+  #news{
+    padding: 16px 16px;
+    
+    .container .row{
+      display: flex;
+
+      .news-feed{
+        order: 2;
+
+        .article-container{ padding: 16px 0 }
+
+        article:last-child{ margin-bottom: 0px }
+      }
+
+      aside {
+        margin-top: 16px;  
+        order: 1;
+
       }
     }
   }
