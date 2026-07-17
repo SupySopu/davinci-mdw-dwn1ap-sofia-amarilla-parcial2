@@ -45,41 +45,65 @@
                     <h2>CONTACTANOS</h2>
                 </div>
                 
-                <div class="form col-mobile-4 col-6">
-                    <form action="./section/gracias.html" method="GET">
-                        <h3 class="highlight">Formulario</h3>
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="nombre" required>
-                            
-                        <label for="mail">Correo electrónico</label>
-                        <input type="email" id="mail" name="correo" required>
-                            
-                        <label for="asunto">Asunto</label>
-                        <input type="text" id="asunto" name="asunto" required>
-                            
-                        <div class="options">
-                            <fieldset>
-                                <legend>¿Qué te interesa visitar?</legend>
-                                <label for="glaciares">
-                                    <input id="glaciares" type="checkbox" name="glaciares" value="glaciares"> Glaciares
-                                </label>
-                                <label for="auroras">
-                                    <input id="auroras" type="checkbox" name="auroras" value="auroras"> Auroras Boreales
-                                </label>
-                                <label for="volcanes">
-                                    <input id="volcanes" type="checkbox" name="volcanes" value="volcanes"> Volcanes
-                                </label>
-                            </fieldset>
-                        </div>
+                <div class="form col-mobile-4 col-6 col-tablet-7">
+                <form action="backend.php" method="POST">
+                    <h3 class="highlight">Formulario de Consulta</h3>
+                    
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="nombre" required>
 
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="mensaje" placeholder="Escribe tu consulta detallada aquí..." required></textarea>
+                    <label for="lastname">Apellido</label>
+                    <input type="text" id="lastname" name="apellido" required>
 
-                        <button type="submit" class="col-mobile-3">Enviar Consulta</button>
-                    </form>
-                </div>
+                    <label for="username">Nombre de Usuario</label>
+                    <input type="text" id="username" name="usuario" required>
 
-                <div class="location col-6 col-mobile-4">
+                    <label for="mail">Correo electrónico</label>
+                    <input type="email" id="mail" name="correo" required>
+
+                    <label for="password">Clave</label>
+                    <input type="password" id="password" name="clave" required>
+
+                    <label for="gender">Sexo</label>
+                    <select id="gender" name="sexo" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="otro">Otro / No deseo especificar</option>
+                    </select>
+                        
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" required>
+
+                    <div class="options">
+                        <fieldset id="interests" name="intereses">
+                            <legend>¿Qué te interesa visitar?</legend>
+                            <label for="glaciares">
+                                <input id="glaciares" type="checkbox" name="glaciares" value="glaciares"> Glaciares
+                            </label>
+                            <label for="auroras">
+                                <input id="auroras" type="checkbox" name="auroras" value="auroras"> Auroras Boreales
+                            </label>
+                            <label for="volcanes">
+                                <input id="volcanes" type="checkbox" name="volcanes" value="volcanes"> Volcanes
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <label for="documento">Adjuntar foto de pasaporte o itinerario preliminar (PDF, JPG, PNG)</label>
+                    <input type="file" id="documento" name="archivo_adjunto" required >
+
+                    <label for="travel-date">Fecha estimada de viaje a Islandia</label>
+                    <input type="date" id="travel-date" name="fecha_viaje" required>
+
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="mensaje" placeholder="Escribe tu consulta detallada aquí..." required></textarea>
+
+                    <button type="submit" class="col-mobile-3">Enviar Consulta</button>
+                </form>
+            </div>
+
+                <div class="location col-6 col-mobile-4 col-tablet-7">
                     <p>
                         Si tiene alguna pregunta sobre los tours o ayuda para planear su itinerario, estamos dispuestos a 
                         asistirlo en todos los pasos que sean necesarios.

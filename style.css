@@ -130,7 +130,7 @@ li a:hover:before{ width: 100% }
 #hero-home h2{
   font-family: "mitr", sans-serif;
   font-weight: 500;
-  font-size: 200px;
+  font-size: 10rem;
   line-height: 200px;
 }
 
@@ -141,7 +141,7 @@ li a:hover:before{ width: 100% }
 #hero-news h2{
   font-family: "mitr", sans-serif;
   font-weight: 500;
-  font-size: 128px;
+  font-size: 8rem;
   line-height: 150px;
 }
 
@@ -796,6 +796,60 @@ form button{
 
 .align-items-center {
     align-items: center;
+}
+
+@media screen and (max-width: 840px){
+  .container{
+    max-width: 840px;
+  }
+
+  #main-header .container{
+    gap: 3.5rem;
+
+    .main-navigation ul{
+      gap: 3.5rem;
+    }
+  }
+
+  #why-awesome .container{
+    ul li{ 
+      align-items: center;
+      p { display: none }
+    }
+  }
+
+  #map .container{
+    .bottom-right{
+      right: 40px;
+    }
+  }
+
+  .slider-cards .container-cards{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+
+    .card{
+      flex: 0 0 calc((100% - 32px) / 2);
+    }
+  }
+
+  #form-wrapper .container{
+    padding: 0;
+    gap: 0;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .col-tablet-1{ width: 25% }
+  .col-tablet-2{ width: 33.3333% }
+  .col-tablet-3{ width: 50% }
+  .col-tablet-4{ width: 66.6667% }
+  .col-tablet-5{ width: 75% }
+  .col-tablet-6{ width: 83.3333%; }
+  .col-tablet-7{ width: 100% }
 }
 
 @media screen and (max-width: 400px) {
