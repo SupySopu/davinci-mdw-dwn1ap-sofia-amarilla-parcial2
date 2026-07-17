@@ -46,16 +46,13 @@
                 </div>
                 
                 <div class="form col-mobile-4 col-6 col-tablet-7">
-                <form action="gracias.html" method="POST" data-netlify="true">
+                <form id="consultasForm" action="gracias.html" method="POST">
                     <h3 class="highlight">Formulario de Consulta</h3>
                     
-                    <label for="name">Nombre</label>
+                    <label for="name">Nombre Completo</label>
                     <input type="text" id="name" name="nombre" required>
 
-                    <label for="lastname">Apellido</label>
-                    <input type="text" id="lastname" name="apellido" required>
-
-                    <label for="username">Nombre de Usuario</label>
+                    <label for="username">Usuario</label>
                     <input type="text" id="username" name="usuario" required>
 
                     <label for="mail">Correo electrónico</label>
@@ -63,17 +60,6 @@
 
                     <label for="password">Clave</label>
                     <input type="password" id="password" name="clave" required>
-
-                    <label for="gender">Sexo</label>
-                    <select id="gender" name="sexo" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="otro">Otro / No deseo especificar</option>
-                    </select>
-                        
-                    <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="asunto" required>
 
                     <div class="options">
                         <fieldset id="interests" name="intereses">
@@ -90,14 +76,14 @@
                         </fieldset>
                     </div>
 
-                    <label for="documento">Adjuntar foto de pasaporte o itinerario preliminar (PDF, JPG, PNG)</label>
-                    <input type="file" id="documento" name="archivo_adjunto" required >
-
-                    <label for="travel-date">Fecha estimada de viaje a Islandia</label>
-                    <input type="date" id="travel-date" name="fecha_viaje" required>
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" required>
 
                     <label for="message">Mensaje</label>
                     <textarea id="message" name="mensaje" placeholder="Escribe tu consulta detallada aquí..." required></textarea>
+
+                    <label for="documento">Adjuntar foto de pasaporte o itinerario preliminar (PDF, JPG, PNG)</label>
+                    <input type="file" id="documento" name="archivo_adjunto" required >
 
                     <button type="submit" class="col-mobile-3">Enviar Consulta</button>
                 </form>
@@ -194,5 +180,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Agarra a consultasForm, escucha el evento al apretar submit
+        // Y crea la instancia, guarda los datos del form
+        // Luego redirecciona a gracias.html
+        document.getElementById('consultasForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const datos = new FormData(this);
+            alert("Nombre:", datos.get("nombre"));
+            alert("Usuario:", datos.get("usuario"));
+            alert("Correo:", datos.get("correo"));
+
+            window.location.href = "./section/gracias.html"; 
+        });
+    </script>
 </body>
 </html>
