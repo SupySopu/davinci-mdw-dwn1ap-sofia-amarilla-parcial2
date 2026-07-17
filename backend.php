@@ -27,5 +27,5 @@ $asunto = 'Mensaje owo'
 mail($para, $asunto, utf8_decode($mensaje), $header)
 
 header("Location:section/gracias.html");
-
+owo
 ?>
